@@ -38,6 +38,11 @@ async def readAll(db:db_dependency):
     allblog = db.query(Post).all()
     return allblog
 
+@router.get("/view_post{post_id}",status_code=status.HTTP_200_OK)
+async def view_post(db:db_dependency,post_id : int):
+    post_model = db.query(Post).filter(post_id == Post.id).first()
+    return post_model
+
 @router.post("/create-post",status_code=status.HTTP_201_CREATED)
 async def create_post(db:db_dependency, post_req:post_create):
     post_model = Post(
@@ -52,9 +57,19 @@ async def create_post(db:db_dependency, post_req:post_create):
 @router.put("/edit-post", status_code=status.HTTP_200_OK)
 async def edit_post(db : db_dependency,post_id : int, post_req:post_create):
     post_model = db.query(Post).filter(post_id == Post.id).first()
+    if post_model is None:
+        raise HTTPException(status_code=status.HTTP_204_NO_CONTENT,detail="Post not found.")
     post_model.title = post_req.title
     post_model.content = post_req.content
     post_model.type = post_req.content
     post_model.tags = post_req.tag
     db.add(post_model)
+    db.commit()
+
+@router.delete("/delete-post",status_code=status.HTTP_200_OK)
+async def delete_post(db :db_dependency, post_id : int):
+    post_model = db.query(Post).filter(post_id == Post.id).first()
+    if post_model is None:
+        raise HTTPException(status_code=status.HTTP_204_NO_CONTENT,detail="Post not found.")
+    db.delete(post_model)
     db.commit()
