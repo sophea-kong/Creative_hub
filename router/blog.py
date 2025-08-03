@@ -48,3 +48,13 @@ async def create_post(db:db_dependency, post_req:post_create):
                       )
     db.add(post_model)
     db.commit()
+
+@router.put("/edit-post", status_code=status.HTTP_200_OK)
+async def edit_post(db : db_dependency,post_id : int, post_req:post_create):
+    post_model = db.query(Post).filter(post_id == Post.id).first()
+    post_model.title = post_req.title
+    post_model.content = post_req.content
+    post_model.type = post_req.content
+    post_model.tags = post_req.tag
+    db.add(post_model)
+    db.commit()
