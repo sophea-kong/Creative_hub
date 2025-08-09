@@ -56,9 +56,18 @@ li a:hover:not(.active) {
   background-color: rgb(216, 238, 216);
 }
 
-.active {
-  background-color: rgb(34, 139, 34);
-  color: white;
+#aboutButton,
+#homeButton {
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#aboutButton.green,
+#homeButton.green {
+  background-color: green;
 }
 
 .text-contain {
@@ -72,6 +81,7 @@ li a:hover:not(.active) {
      /*  */
     height: 400px;
     text-align: center;
+    padding-top: 50px;
 }
 
 .hello {
@@ -130,7 +140,7 @@ li a:hover:not(.active) {
     display: inline-block; 
     align-items: center; 
     justify-content: center; 
-    margin-left: 20px;
+    /* margin-left: 20px; */
     transition: ease 0.3s;
 }
 .contact:hover{
@@ -138,5 +148,58 @@ li a:hover:not(.active) {
     color: white;
 }
 .about-me{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+.about {
+    font-family: 'Roboto mono';
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 400px;
+    margin-bottom: -100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about1 {
+    font-family: "Roboto mono";
+    font-size: 15px;
+    color : grey;
+    margin-bottom: 40px;
+}
+.about-me-body{
+    text-align :center;
+    justify-content: top;
+}
+.abt-me-para {
+    display : inline-block;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.abt-me-content{
+    width:100%;
+    height: 200px;
+    font-family: 'Roboto mono';
+    text-align: left;
+    background-color: white;
+    line-height: 25px;
+}
+.abt-me-card {
+    display: inline-block;
+    background-color: white;
+    filter: drop-shadow(0 0 0.55rem rgb(118, 118, 118));
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+.abt-me-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 30px;
 }
