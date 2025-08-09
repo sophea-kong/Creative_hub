@@ -39,7 +39,8 @@ class post_create(BaseModel):
 
 @router.get("/home",status_code= status.HTTP_200_OK)
 async def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    me = "lol"
+    return templates.TemplateResponse("home.html", {"request": request},context={"name" : me})
 
 @router.get("/",status_code=status.HTTP_200_OK)
 async def readAll(db:db_dependency):
@@ -82,8 +83,8 @@ async def delete_post(db :db_dependency, post_id : int):
     db.delete(post_model)
     db.commit()
 
-UPLOAD_DIR = "uploaded_images"
 
+UPLOAD_DIR = "uploaded_images"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @router.post("/upload/")
