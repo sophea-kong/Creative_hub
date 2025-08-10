@@ -2,6 +2,7 @@ from typing import Annotated
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, Path, Request, status
+from fastapi.staticfiles import StaticFiles
 from starlette import status
 from models import Post, Image
 from database import SessionLocal
@@ -16,8 +17,8 @@ from fastapi.responses import FileResponse
 templates = Jinja2Templates(directory="templates")
 
 router = APIRouter(
-    prefix='/todos',
-    tags=['todos']
+    prefix='/blog',
+    tags=['blog']
 )
 
 
@@ -39,8 +40,7 @@ class post_create(BaseModel):
 
 @router.get("/home",status_code= status.HTTP_200_OK)
 async def home(request: Request):
-    me = "lol"
-    return templates.TemplateResponse("home.html", {"request": request},context={"name" : me})
+    return templates.TemplateResponse("home.html", {"request": request})
 
 @router.get("/",status_code=status.HTTP_200_OK)
 async def readAll(db:db_dependency):

@@ -57,6 +57,7 @@ li a:hover:not(.active) {
 }
 
 #aboutButton,
+#skillsButton,
 #homeButton {
   color: black;
   padding: 10px 20px;
@@ -66,6 +67,7 @@ li a:hover:not(.active) {
 }
 
 #aboutButton.green,
+#skillsButton.green,
 #homeButton.green {
   background-color: green;
 }
@@ -147,7 +149,7 @@ li a:hover:not(.active) {
     background-color: rgb(34, 139, 34);
     color: white;
 }
-.about-me{
+.about-me,.project-title {
     display: block;
     justify-content: center;
     align-items: center;
@@ -208,7 +210,7 @@ li a:hover:not(.active) {
 
 .skill-card {
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 300px 300px 300px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -248,6 +250,7 @@ li a:hover:not(.active) {
     background-color: rgb(218, 247, 218);
     width: 100px;
     height: 100px;
+    border: 0.0001px solid rgb(87, 211, 87);
     border-radius: 50px;
     margin: 0 auto;
     margin-top: 50px;
@@ -264,14 +267,30 @@ li a:hover:not(.active) {
 
 .skill-tag {
     background-color: rgb(218, 247, 218);
-    color: black;
+    color: rgb(34, 139, 34);
     padding: 4px 20px;
     border-radius: 30px;
-    border: 1px solid rgb(122, 194, 122);
+    border: 0.01px solid rgb(112, 183, 112);
     font-family: sans-serif;
     font-size: 14px;
     line-height: 1;
     /* min-width: 60px; */
     text-align: center;
 }
-
+.project-grid {
+    display: grid;
+    grid-template-columns: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.project-card {
+    background-color: rgb(200, 240, 206);
+    border-radius: 10px;
+    font-family: 'Roboto mono';
+}
+.project-pic {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 400px;
+    height: 150px;
+}

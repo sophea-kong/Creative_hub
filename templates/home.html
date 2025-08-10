@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <LINK rel="stylesheet" href="../static/css/home.css">
 </head>
 
 <body id="body-id">
-    <div>
         <div class="top-bar">
             <ul>
                 <li><a id="homeButton" onclick="scrollDownHome()">Home</a></li>
                 <li><a id="aboutButton" onclick="scrollDownAbout()">About</a></li>
+                <li><a id="skillsButton" onclick="scrollDownSkills()">Skills</a></li>
                 <li><a id="projectButton" onclick="scrollDownProject()">Project</a></li>
                 <li><a id="contactButton" onclick="scrollDownContact()">About</a></li>
             </ul>
@@ -24,9 +26,9 @@
             <div class="text-contain">
                 <p class="hello" id="hello-id">Hi, I'm <strong style="color: rgb(34, 139, 34);">Sophea Kong</strong></p>
                 <p class="hello2">Frist year student at CADT</p>
-                <p class="hello3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, modi doloribus!
-                    Beatae enim alias libero repellat voluptates! Porro in quo, obcaecati officiis, temporibus, commodi
-                    aperiam reiciendis sapiente error praesentium dolore?</p>
+                <p class="hello3">
+                    I love exploring tech, building creative projects, and learning new skills in web development and design. This site is where I share my work and ideas as I grow in the digital world.
+                </p>
             </div>
             <div class="button-cotain">
                 <a class="view-me">view-me</a>
@@ -57,29 +59,69 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, quia ratione soluta esse</p>
             </div>
         </div>
-        <div class="skills">
-                <div class="skill-title">
-                    <p style="margin: 5px 0;" class="skill-title-1">Skills</p>
-                    <p style="margin: 5px 0;" class="skill-title-2">Technologies and tools I use to bring ideas to life</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-card-1">
-                        <div class="skill-card-icon">
-                            <i class="fa fa-database" style="font-size: 30px; color: rgb(34, 139, 34);"></i>
-                        </div>
-                        <p>Frontend Development</p>
+        <div class="skills" id="skill">
+            <div class="skill-title">
+                <p style="margin: 5px 0;" class="skill-title-1">Skills</p>
+                <p style="margin: 5px 0;" class="skill-title-2">Technologies and tools I use to bring ideas to life</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-1">
+                    <div class="skill-card-icon">
+                        <i class="fa fa-database" style="font-size: 30px; color: rgb(34, 139, 34);"></i>
                     </div>
-                    <div class="skill-card-2">
-                        <div class="skill-card-icon2">
-                            <i class="fa fa-code" style="font-size: 30px; color: rgb(34, 139, 34);"></i>
-                        </div>
-                        <p>Backend Development</p>
-                        <div class="skill-card-category2">
-                            <span class="skill-tag">python</span>
-                            <span class="skill-tag">mySQL</span>
-                            <span class="skill-tag" style="width: 30px;">git</span>
-                        </div>
+                    <p style="font-family: 'Roboto mono'; letter-spacing: 0.01px;">Frontend Development</p>
+                    <div class="skill-card-category2">
+                        <span class="skill-tag">Basic HTML</span>
+                        <span class="skill-tag">Basic CSS</span>
+                        <span class="skill-tag">Basic JS</span>
+                    </div>
+                </div>
+                <div class="skill-card-1">
+                    <div class="skill-card-icon">
+                        <i class="fa fa-code" style="font-size: 30px; color: rgb(34, 139, 34);"></i>
+                    </div>
+                    <p style="font-family: 'Roboto mono'; letter-spacing: 0.01px;">Backend Development</p>
+                    <div class="skill-card-category2">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">mySQL</span>
+                        <span class="skill-tag" style="width: 30px;">Git</span>
+                    </div>
 
+                </div>
+                <div class="skill-card-1" id="skills-card">
+                    <div class="skill-card-icon">
+                        <i class="fa fa-palette" style="font-size: 30px; color: rgb(34, 139, 34);"></i>
+                    </div>
+                    <p style="font-family: 'Roboto mono'; letter-spacing: 0.01px;">Design & Tools</p>
+                    <div class="skill-card-category2">
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Render</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-title">
+                <p style="font-family: 'Roboto mono';
+                          display: inline-block;
+                          font-size: 40px;
+                          margin-top: 400px;
+                          margin-bottom: -100px;
+                          margin-left: auto;
+                          margin-right: auto;">
+                          My Project
+                </p>
+                <p style="font-family: 'Roboto mono'; color: grey;;">A selection of my recent work that showcase my skills and passion for development</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="../asset/IMG_20250808_231627_847.jpg" class="project-pic">
+                    <p>Sophea's Creative Hub</p>
+                    <p style="font-size: 13px; text-align: left; width: 350px; padding-left: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste magnam quaerat recusandae.</p>
+                    <div class="project-tag">
+                        <span class="project-tag-span">FastAPI</span>
+                        <span class="project-tag-span">HTML/CSS/JS</span>
                     </div>
                 </div>
             </div>

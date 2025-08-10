@@ -4,6 +4,9 @@ function scrollDownAbout(){
 function scrollDownHome(){
     document.getElementById('home-id').scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
+function scrollDownSkills(){
+    document.getElementById('skills-card').scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
 // function scrollDownProject(){
 //     document.getElementById('home-id').scrollIntoView({ behavior: 'smooth', block: 'start'});
 // }
@@ -26,3 +29,4 @@ function activateButton(buttonid,targetid){
 }
 activateButton("aboutButton",'about-me-id')
 activateButton('homeButton','hello-id')
+activateButton('skillsButton','skills-card')
