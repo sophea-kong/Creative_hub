@@ -1,5 +1,5 @@
 function scrollDownAbout(){
-    document.getElementById('about-me-id').scrollIntoView({ behavior: 'smooth', block: 'start'});
+    document.getElementById('about-me-id1').scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
 function scrollDownHome(){
     document.getElementById('home-id').scrollIntoView({ behavior: 'smooth', block: 'start'});

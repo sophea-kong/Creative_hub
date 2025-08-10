@@ -154,7 +154,7 @@ li a:hover:not(.active) {
     text-align: center;
 }
 
-.about {
+.about, .skill-title-1{
     font-family: 'Roboto mono';
     display: inline-block;
     font-size: 40px;
@@ -163,7 +163,7 @@ li a:hover:not(.active) {
     margin-left: auto;
     margin-right: auto;
 }
-.about1 {
+.about1,.skill-title-2 {
     font-family: "Roboto mono";
     font-size: 15px;
     color : grey;
@@ -171,14 +171,17 @@ li a:hover:not(.active) {
 }
 .about-me-body{
     text-align :center;
-    justify-content: top;
+    display: grid;
+    grid-template-columns: 400px 200px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 150px;
 }
 .abt-me-para {
     display : inline-block;
     height: 300px;
     width: 500px;
     border-radius: 10px;
-    margin-right: 20px;
 }
 .abt-me-content{
     width:100%;
@@ -195,7 +198,6 @@ li a:hover:not(.active) {
     width: 350px;
     height: 300px;
     border-radius: 10px;
-
 }
 .abt-me-pic{
     width: 100px;
@@ -203,3 +205,73 @@ li a:hover:not(.active) {
     border-radius: 50px;
     margin-top: 30px;
 }
+
+.skill-card {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 70px;
+}
+.skills {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+}
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    text-align: center;  /* Center text inside the <p> elements */
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+.skill-card-1,.skill-card-2{
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.55rem rgb(193, 193, 193));
+    width: 300px;
+    height: 300px;
+    transition: all 0.3s;
+}
+.skill-card-1:hover,.skill-card-2:hover{
+    filter: drop-shadow(0 0 0.55rem rgb(118, 118, 118));
+    transform: translateY(-10px);
+}
+.skill-card-icon,.skill-card-icon2 {
+    display: flex;
+    background-color: rgb(218, 247, 218);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.skill-card-category2 {
+    display: flex;
+    gap: 8px; /* Space between tags */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background-color: rgb(218, 247, 218);
+    color: black;
+    padding: 4px 20px;
+    border-radius: 30px;
+    border: 1px solid rgb(122, 194, 122);
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    /* min-width: 60px; */
+    text-align: center;
+}
+
